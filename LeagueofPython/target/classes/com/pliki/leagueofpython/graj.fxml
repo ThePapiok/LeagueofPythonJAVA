@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pliki.leagueofpython.controllers.GrajController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="12.199999046325686" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="544.6000009536743" minWidth="10.0" prefWidth="544.6000009536743" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.99996948242188" minWidth="10.0" prefWidth="31.999969482421875" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="34.4" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="351.8" minHeight="10.0" prefHeight="351.8" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.39999999999998" minHeight="10.0" prefHeight="11.800000000000011" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button minWidth="100.0" mnemonicParsing="false" text="Zagraj" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="200.0" left="60.0" />
+         </GridPane.margin>
+      </Button>
+      <TableView minHeight="500.0" minWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <GridPane.margin>
+            <Insets right="500.0" />
+         </GridPane.margin>
+      </TableView>
+      <Button disable="true" minWidth="100.0" mnemonicParsing="false" text=" Usun " visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="60.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

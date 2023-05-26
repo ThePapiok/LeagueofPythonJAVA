@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.pliki.leagueofpython.controllers.UzytkownicyController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="61.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="372.6" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="167.79999999999995" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="127.4" minHeight="0.0" prefHeight="44.999998450279236" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.1999990463257" minHeight="10.0" prefHeight="36.4" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="258.3999847412109" minHeight="9.599999999999994" prefHeight="32.599999999999994" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="257.3999847412109" minHeight="10.0" prefHeight="29.80001525878906" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="231.39998474121091" minHeight="10.0" prefHeight="31.00001525878909" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="230.39998474121091" minHeight="10.0" prefHeight="229.39998474121091" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefWidth="90.0" text="Zbanuj" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" prefWidth="90.0" text="Odbanuj" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" prefWidth="90.0" text="Nadaj MOD" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="Odbierz MOD" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="4">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="78.19998168945312" text="C2" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="30.0" right="10.0" top="30.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Wiadmosc do uzytkownika:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="200.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

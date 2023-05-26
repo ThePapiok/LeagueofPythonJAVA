@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_2.xsd">
+<persistence-unit name="Baza" transaction-type="RESOURCE_LOCAL">
+<!-- Persistence provider -->
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+<!-- Entity classes -->
+<class>com.company.Student</class>
+<class>com.company.Ocena</class>
+<properties>
+    <!-- The JDBC driver of your database -->
+    <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+    <!-- The JDBC URL to the database instance -->
+    <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" />
+
+    <property name="javax.persistence.jdbc.user" value="postgres" />
+
+    <property name="javax.persistence.jdbc.password" value="Lukasba1" />
+</properties>
+</persistence-unit>
+</persistence>

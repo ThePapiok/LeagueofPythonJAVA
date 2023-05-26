@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pliki.leagueofpython.controllers.RankingController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="110.80000000000001" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="761.8" minWidth="10.0" prefWidth="761.8" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="33.6" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="40.20000000000001" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="337.6" minHeight="10.0" prefHeight="305.4" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <TableView minHeight="440.0" minWidth="600.0" prefHeight="440.0" prefWidth="762.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="100.0" />
+         </GridPane.margin>
+      </TableView>
+      <TextField minWidth="400.0" prefHeight="26.0" prefWidth="557.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="20.0" right="200.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button mnemonicParsing="false" text="Rosnaco" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+   </children>
+</GridPane>
