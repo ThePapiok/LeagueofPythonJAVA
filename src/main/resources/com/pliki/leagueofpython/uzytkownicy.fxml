@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pliki.leagueofpython.controllers.UzytkownicyController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="61.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="372.6" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="167.79999999999995" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="127.4" minHeight="0.0" prefHeight="44.999998450279236" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.1999990463257" minHeight="10.0" prefHeight="36.4" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="258.3999847412109" minHeight="9.599999999999994" prefHeight="32.599999999999994" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="257.3999847412109" minHeight="10.0" prefHeight="29.80001525878906" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="231.39998474121091" minHeight="10.0" prefHeight="31.00001525878909" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="230.39998474121091" minHeight="10.0" prefHeight="229.39998474121091" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#zbanuj" prefWidth="120.0" text="Zbanuj" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#odbanuj" prefWidth="120.0" text="Odbanuj" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="150.0" />
+         </GridPane.margin></Button>
+      <Button mnemonicParsing="false" onAction="#dajMod" prefWidth="120.0" text="Nadaj MOD" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#odbierzMod" prefWidth="120.0" text="Odbierz MOD" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <TableView fx:id="gracze" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="4">
+        <columns>
+          <TableColumn fx:id="id_gracze" prefWidth="62.19999772310257" text="Id" />
+          <TableColumn fx:id="nazwa_gracze" prefWidth="121.20000839233398" text="nazwa" />
+            <TableColumn fx:id="uprawnienia_gracze" prefWidth="77.20002746582031" text="uprawnienia" />
+            <TableColumn fx:id="ograniczenia_gracze" prefWidth="95.20004272460938" text="ograniczenia" />
+            <TableColumn fx:id="data_gracze" prefWidth="128.0" text="data" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <TextField fx:id="szukaj" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea fx:id="wiadomosc" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="30.0" right="10.0" top="30.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Wiadmosc do uzytkownika:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="200.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#zablokuj" prefWidth="120.0" text="Zablokuj" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="150.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#odblokuj" prefWidth="120.0" text="Odblokuj" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="150.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#szukaj" prefWidth="120.0" text="Szukaj" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="blad" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="100.0" top="200.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

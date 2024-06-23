@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pliki.leagueofpython.controllers.ZgloszenieController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="59.79999618530273" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="167.4" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="64.19999999999999" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="109.80000000000001" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="199.39999999999998" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="27.6" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="27.6" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.4" minHeight="0.0" prefHeight="78.00000381469727" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="309.2000009536743" minHeight="10.0" prefHeight="37.999996185302734" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.40001525878904" minHeight="10.0" prefHeight="111.4" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="184.39998474121091" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="63.39999999999998" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="Tytul:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nazwa" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label prefHeight="18.0" prefWidth="35.0" text="Tresc:" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="opis" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Input:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label text="Output:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="input" prefHeight="126.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="70.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ListView>
+      <ListView fx:id="output" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="70.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ListView>
+      <Label prefHeight="18.0" prefWidth="80.0" text="Limit(ms):" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Punktowany" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="80.0" top="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Czas(m):" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="100.0" top="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="czas" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="limit" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea fx:id="wiadomosc" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Wiadmosc do użytkownika:" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" top="90.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#zatwierdz" text="Zatwierdz" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#odrzuc" text="Odrzuc" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="80.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#block" text="Block" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="145.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="Uzytkownik:" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="nick" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin></Label>
+      <Label fx:id="blad" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="zmienne" editable="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Zmienne:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+   </children>
+</GridPane>
