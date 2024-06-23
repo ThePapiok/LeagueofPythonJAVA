@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0C0C0C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pliki.leagueofpython.controllers.WeryfikacjaSzczegolyController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="59.79999618530273" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="167.4" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="64.19999999999999" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="109.80000000000001" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.99998474121094" minWidth="10.0" prefWidth="199.39999999999998" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="128.4" minHeight="10.0" prefHeight="27.6" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.4" minHeight="0.0" prefHeight="78.00000381469727" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="309.2000009536743" minHeight="10.0" prefHeight="37.999996185302734" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="309.2000009536743" minHeight="10.0" prefHeight="37.999996185302734" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.40001525878904" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="184.39998474121091" minHeight="10.0" prefHeight="133.60000000000002" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="108.0" minHeight="0.19999999999998863" prefHeight="27.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="132.20000000000005" minHeight="10.0" prefHeight="132.20000000000005" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="63.39999999999998" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#wroc" text="Wroc">
+         <GridPane.margin>
+            <Insets left="10.0" top="30.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="Tytul:" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tytul" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label prefHeight="18.0" prefWidth="35.0" text="Tresc:" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="tresc" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Input:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label text="Output:" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="90.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="input" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ListView>
+      <ListView fx:id="output" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ListView>
+      <Label prefHeight="18.0" prefWidth="80.0" text="Limit(ms):" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="80.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label text="Punktowany" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Czas(m):" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="80.0" top="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="czas" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="limit" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea fx:id="wiadomoscmod" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <CheckBox mnemonicParsing="false" text="Odblokuje gracza" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="160.0" />
+         </GridPane.margin></CheckBox>
+      <CheckBox mnemonicParsing="false" text="Usun zadanie" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="160.0" left="150.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="odbierzmod" mnemonicParsing="false" text="Odbierz MOD" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets bottom="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="zbanujmod" mnemonicParsing="false" text="Zbanuj Moderatora" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <Label text="Wiadmosc do moderatora:" GridPane.columnIndex="4" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextArea fx:id="wiadomoscgracz" prefHeight="143.0" prefWidth="280.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextArea>
+      <Label text="Wiadmosc do gracza:" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="20.0" top="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Uzytkownik:" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="40.0" left="60.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label text="Moderator:" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nick" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="40.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="moderator" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextArea fx:id="wiadomoscodmod" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label prefHeight="18.0" prefWidth="148.0" text="wiadomosc wyslana" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets bottom="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="do gracza przez MOD:" GridPane.rowIndex="7">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="zmienne" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="100.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Zmienne:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="80.0" top="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Akcja:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="akcja" text="ZATWIERDZONO" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="zablokujgracza" mnemonicParsing="false" text="Zablokuj gracza" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="zbanujgracza" mnemonicParsing="false" text="Zbanuj gracza" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="170.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="odblokujgracza" mnemonicParsing="false" text="Odblokuj gracza" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="przywroczadanie" mnemonicParsing="false" text="Przywroc zadanie" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="140.0" top="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="usunzadanie" mnemonicParsing="false" text="Usun zadanie" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="140.0" top="30.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <RadioButton fx:id="pomingracz" mnemonicParsing="false" selected="true" text="Pomin" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="40.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <Label text="Gracz:" GridPane.columnIndex="4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Moderator:" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="100.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label text="Zadanie:" GridPane.columnIndex="4">
+         <GridPane.margin>
+            <Insets left="140.0" />
+         </GridPane.margin>
+      </Label>
+      <RadioButton fx:id="pominzadanie" mnemonicParsing="false" selected="true" text="Pomin" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="40.0" left="140.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <Button mnemonicParsing="false" onAction="#wyslij" text="Wyslij" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="220.0" top="90.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="blad" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
